@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 KiotaMovies/bin/
 KiotaMovies/obj/
+KiotaMovies/obj/Debug/net.8.0/
+/KiotaMovies/obj/Debug/net8.0/apphost.exe
