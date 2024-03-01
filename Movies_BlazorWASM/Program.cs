@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Movies_BlazorWASM;
 using Movies_BlazorWASM.Data;
 
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
