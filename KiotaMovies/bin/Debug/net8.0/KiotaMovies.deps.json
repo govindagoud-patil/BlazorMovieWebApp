@@ -1,0 +1,203 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "KiotaMovies/1.0.0": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11",
+          "Microsoft.Kiota.Http.HttpClientLibrary": "1.3.7",
+          "Microsoft.Kiota.Serialization.Form": "1.1.5",
+          "Microsoft.Kiota.Serialization.Json": "1.1.8",
+          "Microsoft.Kiota.Serialization.Multipart": "1.1.3",
+          "Microsoft.Kiota.Serialization.Text": "1.1.4"
+        },
+        "runtime": {
+          "KiotaMovies.dll": {}
+        }
+      },
+      "Microsoft.Kiota.Abstractions/1.7.11": {
+        "dependencies": {
+          "Std.UriTemplate": "0.0.53",
+          "System.Diagnostics.DiagnosticSource": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Abstractions.dll": {
+            "assemblyVersion": "1.7.11.0",
+            "fileVersion": "1.7.11.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Http.HttpClientLibrary/1.3.7": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11",
+          "System.Diagnostics.DiagnosticSource": "6.0.0",
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Http.HttpClientLibrary.dll": {
+            "assemblyVersion": "1.3.7.0",
+            "fileVersion": "1.3.7.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Form/1.1.5": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Form.dll": {
+            "assemblyVersion": "1.1.5.0",
+            "fileVersion": "1.1.5.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Json/1.1.8": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11",
+          "System.Text.Json": "6.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Json.dll": {
+            "assemblyVersion": "1.1.8.0",
+            "fileVersion": "1.1.8.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Multipart/1.1.3": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Multipart.dll": {
+            "assemblyVersion": "1.1.3.0",
+            "fileVersion": "1.1.3.0"
+          }
+        }
+      },
+      "Microsoft.Kiota.Serialization.Text/1.1.4": {
+        "dependencies": {
+          "Microsoft.Kiota.Abstractions": "1.7.11"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Kiota.Serialization.Text.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Std.UriTemplate/0.0.53": {
+        "runtime": {
+          "lib/net5.0/Std.UriTemplate.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Text.Json/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "KiotaMovies/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Kiota.Abstractions/1.7.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DbKPzjYrdXDWdL4Y5tqj6uulaykw+3ZMicj+1P6YB8tj54WdxyTi7l6hrarXSaoY55pmtqVpYsO90sYI61Otcg==",
+      "path": "microsoft.kiota.abstractions/1.7.11",
+      "hashPath": "microsoft.kiota.abstractions.1.7.11.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Http.HttpClientLibrary/1.3.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XRw+fr09fBRuwq8zPPZQ6K2dfyCwy+W94vxAlLzwZdNPdc8mxsSD6MdaCSCjze/kpcFmG2j9tjMdv2ZcaaChsA==",
+      "path": "microsoft.kiota.http.httpclientlibrary/1.3.7",
+      "hashPath": "microsoft.kiota.http.httpclientlibrary.1.3.7.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Form/1.1.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UwETf0Dc0HnCIUY/fSKaaLlW+WWPW0bAWHMcRawcQP1XH9kIhAz7pHFysdZjoNeq38guAZ5kc85l+EO12lW2sQ==",
+      "path": "microsoft.kiota.serialization.form/1.1.5",
+      "hashPath": "microsoft.kiota.serialization.form.1.1.5.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Json/1.1.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jd8Etm2bh7Pof6tsD7fR4aSNXZid3qyd8GZ1w5V9pOZmXzSB17MvVMuRpq2ZquGvJk8y9cSGk6guMs2rjnn1tQ==",
+      "path": "microsoft.kiota.serialization.json/1.1.8",
+      "hashPath": "microsoft.kiota.serialization.json.1.1.8.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Multipart/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lj5Azljj648FkT2fZ3K+TBI0DP/GFegWZCqqM6uCYbOm+gB6GevJMFJJuapj9YRI/Rn2qWMgFDr3IUt3Ybdwng==",
+      "path": "microsoft.kiota.serialization.multipart/1.1.3",
+      "hashPath": "microsoft.kiota.serialization.multipart.1.1.3.nupkg.sha512"
+    },
+    "Microsoft.Kiota.Serialization.Text/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QOD76Jtpx8aG8aaY5VofXIMm5ihn1GVJXs3sZU643BpZvUD4vFIGbDjHUe8YTkh3/XrcJRQgCy23j3oxNfr/3Q==",
+      "path": "microsoft.kiota.serialization.text/1.1.4",
+      "hashPath": "microsoft.kiota.serialization.text.1.1.4.nupkg.sha512"
+    },
+    "Std.UriTemplate/0.0.53": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N/BAPKv3F0ldbmPyPjZGGytbFZz25lh+0rD0zTi8JGAh1dZn+SsVQSZ3f/FIbxCmiDUq7Heu0QID3zhcr5PkbQ==",
+      "path": "std.uritemplate/0.0.53",
+      "hashPath": "std.uritemplate.0.0.53.nupkg.sha512"
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
+      "path": "system.diagnostics.diagnosticsource/6.0.0",
+      "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
+      "path": "system.text.json/6.0.0",
+      "hashPath": "system.text.json.6.0.0.nupkg.sha512"
+    }
+  }
+}
