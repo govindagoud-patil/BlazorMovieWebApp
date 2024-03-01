@@ -5,7 +5,13 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies_BlazorWASM", "Movies_BlazorWASM.csproj", "{4DF93C07-CB8F-47EB-88FC-B468DB4343C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KiotaMovies", "..\KiotaMovies\KiotaMovies.csproj", "{3339854C-9311-4C27-A4F8-18396093A246}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KiotaMovies", "..\KiotaMovies\KiotaMovies.csproj", "{3339854C-9311-4C27-A4F8-18396093A246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BE84CD6-5291-4774-8AA1-03D686224183}"
+	ProjectSection(SolutionItems) = preProject
+		BlazorWasmMovie.png = BlazorWasmMovie.png
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
