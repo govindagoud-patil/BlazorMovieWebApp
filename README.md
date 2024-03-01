@@ -7,14 +7,14 @@ dotnet tool install --global Microsoft.OpenApi.Kiota
 
 # Intsall Kiota deps
 
-`
-dotnet add package Microsoft.Kiota.Abstractions \
-dotnet add package Microsoft.Kiota.Http.HttpClientLibrary \
+
+dotnet add package Microsoft.Kiota.Abstractions 
+dotnet add package Microsoft.Kiota.Http.HttpClientLibrary 
 dotnet add package Microsoft.Kiota.Serialization.Form  
 dotnet add package Microsoft.Kiota.Serialization.Json  
 dotnet add package Microsoft.Kiota.Serialization.Text  
 dotnet add package Microsoft.Kiota.Serialization.Multipart  
-`
+
 
 # To Create Client Application , Save OpenAPI OAS 3 as Movies-OpenApi.yaml from swagger page of web api and use below command to generate client
 
