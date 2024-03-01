@@ -361,7 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-KiotaMovies/bin/
-KiotaMovies/obj/
-KiotaMovies/obj/Debug/net.8.0/
-/KiotaMovies/obj/Debug/net8.0/apphost.exe
+/KiotaMovies/bin/
+/KiotaMovies/obj/
+
