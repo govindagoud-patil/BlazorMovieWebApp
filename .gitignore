@@ -364,3 +364,6 @@ FodyWeavers.xsd
 /KiotaMovies/bin/
 /KiotaMovies/obj/
 
+/.vs/Movies_BlazorWASM/DesignTimeBuild/.dtbcache.v2
+/.vs/Movies_BlazorWASM/v17/.futdcache.v2
+/.vs/Movies_BlazorWASM/v17/.suo
