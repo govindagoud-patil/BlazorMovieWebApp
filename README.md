@@ -8,8 +8,8 @@ dotnet tool install --global Microsoft.OpenApi.Kiota
 # Intsall Kiota deps
 
 
-dotnet add package Microsoft.Kiota.Abstractions 
-dotnet add package Microsoft.Kiota.Http.HttpClientLibrary 
+dotnet add package Microsoft.Kiota.Abstractions  
+dotnet add package Microsoft.Kiota.Http.HttpClientLibrary  
 dotnet add package Microsoft.Kiota.Serialization.Form  
 dotnet add package Microsoft.Kiota.Serialization.Json  
 dotnet add package Microsoft.Kiota.Serialization.Text  
