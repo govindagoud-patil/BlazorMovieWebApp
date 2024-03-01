@@ -7,7 +7,6 @@ dotnet tool install --global Microsoft.OpenApi.Kiota
 
 # Intsall Kiota deps
 
-Bash
 `
 dotnet add package Microsoft.Kiota.Abstractions
 dotnet add package Microsoft.Kiota.Http.HttpClientLibrary
