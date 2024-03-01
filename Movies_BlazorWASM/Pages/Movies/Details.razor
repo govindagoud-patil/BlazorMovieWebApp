@@ -1,8 +1,6 @@
 ﻿@page "/movies/details"
-@inject Movies_BlazorWASM.Data.MoviesDbContext DB
-@using Movies_BlazorWASM.Entities
 @inject NavigationManager NavigationManager
-@using Microsoft.EntityFrameworkCore
+@inject MoviesClient MovieClient
 
 <PageTitle>Details</PageTitle>
 
@@ -36,14 +34,16 @@
 </div>
 
 @code {
-    Movie? movie;
+
+       MovieDto? movie;
 
     [SupplyParameterFromQuery]
     public int Id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        movie = await DB.Movie.FirstOrDefaultAsync(m => m.Id == Id);
+        var result = await MovieClient.Movies.GetAsync();
+        movie = result.MovieDtos.FirstOrDefault(m => m.Id == Id);
 
         if (movie is null)
         {

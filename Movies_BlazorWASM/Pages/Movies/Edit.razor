@@ -1,9 +1,6 @@
 ﻿@page "/Movies/edit"
-@inject Movies_BlazorWASM.Data.MoviesDbContext DB
-@using Movies_BlazorWASM.Entities
 @inject NavigationManager NavigationManager
-@using Microsoft.EntityFrameworkCore
-
+@inject MoviesClient MovieClient
 <PageTitle>Edit</PageTitle>
 
 <h1>Edit</h1>
@@ -58,15 +55,18 @@ else
 </div>
 
 @code {
+
     [SupplyParameterFromQuery]
     public int Id { get; set; }
 
     [SupplyParameterFromForm]
-    public Movie? Movie { get; set; }
+    public MovieDto? Movie { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        Movie ??= await DB.Movie.FirstOrDefaultAsync(m => m.Id == Id);
+        var result = await MovieClient.Movies.GetAsync();
+
+        Movie = result?.MovieDtos?.FirstOrDefault(m => m.Id == Id);
 
         if (Movie is null)
         {
@@ -78,29 +78,32 @@ else
     // For more details, see https://aka.ms/RazorPagesCRUD.
     public async Task UpdateMovie()
     {
-        DB.Attach(Movie!).State = EntityState.Modified;
 
         try
         {
-            await DB.SaveChangesAsync();
+
+            var result = await MovieClient.Movies[Id].PutAsync(
+
+            new UpdateMovieRequest()
+                {
+                    Title = Movie.Title,
+                    Description = Movie.Description,
+                    Price = Movie.Price,
+                    ReleaseDate = Movie.ReleaseDate,
+                    Category = Movie.Category,
+                    Id = Movie.Id
+
+                });
+
+
         }
-        catch (DbUpdateConcurrencyException)
+        catch (Exception ex)
         {
-            if (!MovieExists(Movie!.Id))
-            {
-                NavigationManager.NavigateTo("notfound");
-            }
-            else
-            {
-                throw;
-            }
+            throw;
+        
         }
 
         NavigationManager.NavigateTo("/movies");
     }
 
-    bool MovieExists(int id)
-    {
-        return DB.Movie.Any(e => e.Id == id);
-    }
 }

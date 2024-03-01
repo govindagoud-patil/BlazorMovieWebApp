@@ -74,6 +74,10 @@ paths:
       responses:
         '200':
           description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMovieByIdResponse'
     put:
       tags:
         - Movies
@@ -360,6 +364,12 @@ components:
         email:
           type: string
           nullable: true
+      additionalProperties: false
+    GetMovieByIdResponse:
+      type: object
+      properties:
+        movieDto:
+          $ref: '#/components/schemas/MovieDto'
       additionalProperties: false
     GetMoviesResponse:
       type: object

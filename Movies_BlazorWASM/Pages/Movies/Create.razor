@@ -1,7 +1,6 @@
 ﻿@page "/movies/create"
-@inject Movies_BlazorWASM.Data.MoviesDbContext DB
-@using Movies_BlazorWASM.Entities
 @inject NavigationManager NavigationManager
+@inject MoviesClient MovieClient
 
 <PageTitle>Create</PageTitle>
 
@@ -51,13 +50,13 @@
 @code {
 
     [SupplyParameterFromForm]
-    public Movie Movie { get; set; } = new();
+    public CreateMovieRequest Movie { get; set; } = new();
 
     // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
     public async Task AddMovie()
     {
-        DB.Movie.Add(Movie);
-        await DB.SaveChangesAsync();
+            var result = await MovieClient.Movies.PostAsync(Movie);
+      
         NavigationManager.NavigateTo("/movies");
     }
 }

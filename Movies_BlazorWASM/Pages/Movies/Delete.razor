@@ -1,9 +1,7 @@
 ﻿@page "/movies/delete"
-@inject Movies_BlazorWASM.Data.MoviesDbContext DB
-@using Movies_BlazorWASM.Entities
 @inject NavigationManager NavigationManager
 @using Microsoft.EntityFrameworkCore
-
+@inject MoviesClient MovieClient
 <PageTitle>Delete</PageTitle>
 
 <h1>Delete</h1>
@@ -19,23 +17,23 @@
     else {
         <dl class="row">
             <dt class="col-sm-2">Title</dt>
-            <dd class="col-sm-10">@movie.Title</dd>
+            <dd class="col-sm-10">@movie?.MovieDto?.Title</dd>
         </dl>
         <dl class="row">
             <dt class="col-sm-2">Description</dt>
-            <dd class="col-sm-10">@movie.Description</dd>
+            <dd class="col-sm-10">@movie?.MovieDto?.Description</dd>
         </dl>
         <dl class="row">
             <dt class="col-sm-2">Category</dt>
-            <dd class="col-sm-10">@movie.Category</dd>
+            <dd class="col-sm-10">@movie?.MovieDto?.Category</dd>
         </dl>
         <dl class="row">
             <dt class="col-sm-2">ReleaseDate</dt>
-            <dd class="col-sm-10">@movie.ReleaseDate</dd>
+            <dd class="col-sm-10">@movie?.MovieDto?.ReleaseDate</dd>
         </dl>
         <dl class="row">
             <dt class="col-sm-2">Price</dt>
-            <dd class="col-sm-10">@movie.Price</dd>
+            <dd class="col-sm-10">@movie?.MovieDto?.Price</dd>
         </dl>
         <EditForm method="post" Model="movie" OnValidSubmit="DeleteMovie" FormName="delete" Enhance>
             <button type="submit" class="btn btn-danger" disabled="@(movie is null)">Delete</button> |
@@ -45,16 +43,16 @@
 </div>
 
 @code {
-    Movie? movie;
+    GetMovieByIdResponse? movie;
 
     [SupplyParameterFromQuery]
     public int Id { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        movie = await DB.Movie.FirstOrDefaultAsync(m => m.Id == Id);
+        movie = await MovieClient.Movies[Id].GetAsync();
 
-        if (movie is null)
+        if (movie.MovieDto is null)
         {
             NavigationManager.NavigateTo("notfound");
         }
@@ -62,8 +60,15 @@
 
     public async Task DeleteMovie()
     {
-        DB.Movie.Remove(movie!);
-        await DB.SaveChangesAsync();
+        try
+        {
+            await MovieClient.Movies[Id].DeleteAsync();
+
+        } catch (Exception ex)
+        {
+            throw ex;
+        }
+
         NavigationManager.NavigateTo("/movies");
     }
 }
